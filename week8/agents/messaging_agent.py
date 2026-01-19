@@ -68,5 +68,6 @@ class MessagingAgent(Agent):
         """
         self.log("Messaging Agent is using Claude to craft the message")
         text = self.craft_message(description, deal_price, estimated_true_value)
+        print(text)
         self.push(text[:200] + "... " + url)
         self.log("Messaging Agent has completed")
